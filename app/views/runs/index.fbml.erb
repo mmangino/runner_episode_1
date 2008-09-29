@@ -1,0 +1,15 @@
+
+<h1> <%= fb_name @user, :possessive => true%> Runs </h1>
+
+<% for run in @runs %>
+  <%= fb_profile_pic run.user %> <%= fb_name run.user, :capitalize=>true, :use_you=>false %> ran <%= run.distance %> in <%= run.time_hours %> and <%= run.time_minutes %> <br />
+<% end %>
+
+<% unless @friends_runs.blank? %>
+  <h1>Your friends' runs</h1>
+  <% for run in @friends_runs %>
+    <%= fb_profile_pic run.user %> 
+    <%= link_to(fb_name(run.user, :capitalize=>true, :use_you=>false, :linked=>false),
+                user_runs_path(run.user))%> ran <%= run.distance %> in <%= run.time_hours %> and <%= run.time_minutes %> <br />
+  <% end %>
+<% end %>

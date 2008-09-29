@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  distance: 1.5
+  description: MyText
+  time_in_seconds: 1
+  user_id: 1
+  ran_on: 2008-08-29
+
+two:
+  distance: 1.5
+  description: MyText
+  time_in_seconds: 1
+  user_id: 1
+  ran_on: 2008-08-29

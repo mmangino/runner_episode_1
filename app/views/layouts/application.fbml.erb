@@ -1,0 +1,10 @@
+
+<br />
+<br />
+<% fb_tabs do %>
+  <%= fb_tab_item "Your Runs", runs_path, :selected => (@user == current_user)%>
+  <%= fb_tab_item "New Run", new_run_path, :selected =>(!@run.nil?)%>
+<% end %>
+<br />
+
+<%= yield%>

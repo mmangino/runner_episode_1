@@ -1,0 +1,7 @@
+<% facebook_form_for @run do |f| %>
+  <%= f.text_area :description %>
+  <%= f.text_field :distance %>
+  <%= f.text(text_field(:run,:time_hours,:size=>2,:style=>"width: 20px")+" : "+text_field(:run,:time_minutes,:size=>2,:style=>"width: 20px"),:label=>"Time (hh:mm)")%>  
+  <%= f.date_select :ran_on %>
+  <%= f.buttons "Add Run" %>
+<% end %>
